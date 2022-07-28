@@ -11,19 +11,19 @@ function getComputerChoice() {
 }
 
 function PlayRound(playerSelection, computerSelection) {
-    if (playerSelection.toLowerCase == computerSelection) {
+    if (playerSelection.toLowerCase() == computerSelection) {
         return "Tie Round!";
-    } else if (playerSelection.toLowerCase == 'rock' && computerSelection == 'paper') {
+    } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'paper') {
         return "Paper beats rock, you lose this round!";
-    } else if (playerSelection.toLowerCase == 'rock' && computerSelection == 'scissors') {
+    } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'scissors') {
         return "rock beats scissors, you win this round!";
-    } else if (playerSelection.toLowerCase == 'paper' && computerSelection == 'scissors') {
+    } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'scissors') {
         return "scissors beats paper, you lose this round!";
-    } else if (playerSelection.toLowerCase == 'paper' && computerSelection == 'rock') {
+    } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'rock') {
         return "Paper beats rock, you win this round!";
-    } else if (playerSelection.toLowerCase == 'scissors' && computerSelection == 'rock') {
+    } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'rock') {
         return "Rock beats scissors, you lose this round!";
-    } else if (playerSelection.toLowerCase == 'scissors' && computerSelection == 'paper') {
+    } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'paper') {
         return "scissors beats paper, you win this round!";
     } else {
         return "Invalid Input";
@@ -31,4 +31,4 @@ function PlayRound(playerSelection, computerSelection) {
     
 }
 
-console.log(PlayRound(playerSelection = prompt("Rock, Paper, or Scissors?"), getComputerChoice()));
+console.log(PlayRound(prompt("Rock, Paper, or Scissors?"), getComputerChoice()));
