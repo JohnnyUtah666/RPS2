@@ -10,7 +10,7 @@ function getComputerChoice() {
     }
 }
 
-function PlayRound(playerSelection, computerSelection) {
+function playRound(playerSelection, computerSelection) {
     if (playerSelection.toLowerCase() == computerSelection) {
         return "Tie Round!";
     } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'paper') {
@@ -30,5 +30,12 @@ function PlayRound(playerSelection, computerSelection) {
     }
     
 }
+let computerScore
+let playerScore
+function game() {
+    for (let i = 0; i < 5; i++) {
+        playRound(prompt("Rock, Paper, or Scissors?"), getComputerChoice());
+    }
+}
 
-console.log(PlayRound(prompt("Rock, Paper, or Scissors?"), getComputerChoice()));
+game()
