@@ -43,9 +43,12 @@ function game() {
         } else if (roundWinner.includes("lose")) {
             computerScore++
         }
+        console.log(roundWinner);
     }
     if (playerScore > computerScore) {
         return "you win the whole damn thing!";
+    } else if (playerScore == computerScore) {
+        return "Tie game, play again!";
     } else {
         return "the computer beat you, try again...";
     }
