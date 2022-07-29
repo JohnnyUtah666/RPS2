@@ -10,32 +10,46 @@ function getComputerChoice() {
     }
 }
 
+let roundWinner; 
+
 function playRound(playerSelection, computerSelection) {
     if (playerSelection.toLowerCase() == computerSelection) {
-        return "Tie Round!";
+        return roundWinner = "Tie Round!";
     } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'paper') {
-        return "Paper beats rock, you lose this round!";
+        return roundWinner = "Paper beats rock, you lose this round!";
     } else if (playerSelection.toLowerCase() == 'rock' && computerSelection == 'scissors') {
-        return "rock beats scissors, you win this round!";
+        return roundWinner = "rock beats scissors, you win this round!";
     } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'scissors') {
-        return "scissors beats paper, you lose this round!";
+        return roundWinner = "scissors beats paper, you lose this round!";
     } else if (playerSelection.toLowerCase() == 'paper' && computerSelection == 'rock') {
-        return "Paper beats rock, you win this round!";
+        return roundWinner = "Paper beats rock, you win this round!";
     } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'rock') {
-        return "Rock beats scissors, you lose this round!";
+        return roundWinner = "Rock beats scissors, you lose this round!";
     } else if (playerSelection.toLowerCase() == 'scissors' && computerSelection == 'paper') {
-        return "scissors beats paper, you win this round!";
+        return roundWinner = "scissors beats paper, you win this round!";
     } else {
         return "Invalid Input";
     }
     
 }
-let computerScore
-let playerScore
+let computerScore = 0
+let playerScore = 0
 function game() {
     for (let i = 0; i < 5; i++) {
         playRound(prompt("Rock, Paper, or Scissors?"), getComputerChoice());
+        
+        if (roundWinner.includes("win")) {
+            playerScore++;
+        } else if (roundWinner.includes("lose")) {
+            computerScore++
+        }
+    }
+    if (playerScore > computerScore) {
+        return "you win the whole damn thing!";
+    } else {
+        return "the computer beat you, try again...";
     }
 }
-
-game()
+console.log(game());
+console.log(playerScore);
+console.log(computerScore);
