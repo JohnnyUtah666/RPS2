@@ -44,6 +44,8 @@ function game() {
             computerScore++
         }
         console.log(roundWinner);
+        console.log(playerScore);
+        console.log(computerScore);
     }
     if (playerScore > computerScore) {
         return "you win the whole damn thing!";
@@ -54,5 +56,3 @@ function game() {
     }
 }
 console.log(game());
-console.log(playerScore);
-console.log(computerScore);
