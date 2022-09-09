@@ -1,3 +1,8 @@
+let button = document.querySelector("button");
+button.addEventListener("click", () => {
+    console.log("Button clicked.");
+});
+
 function getComputerChoice() {
    let x = Math.random();
 
@@ -36,25 +41,7 @@ function playRound(playerSelection, computerSelection) {
 let computerScore = 0
 let playerScore = 0
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-        playRound(prompt("Rock, Paper, or Scissors?"), getComputerChoice());
-        
-        if (roundWinner.includes("win")) {
-            playerScore++;
-        } else if (roundWinner.includes("lose")) {
-            computerScore++
-        }
-        console.log(roundWinner);
-        console.log(playerScore);
-        console.log(computerScore);
-    }
-    if (playerScore > computerScore) {
-        return "you win the whole damn thing!";
-    } else if (playerScore == computerScore) {
-        return "Tie game, play again!";
-    } else {
-        return "the computer beat you, try again...";
-    }
-}
+
+
+
 console.log(game());
