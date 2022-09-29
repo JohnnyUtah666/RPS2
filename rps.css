@@ -1,0 +1,60 @@
+#buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.btn {
+    height: 125px;
+    width: 125px;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+#rock, #paper, #scissors {
+    font-family: "Courier New";
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    border-style: solid;
+    border-width: 4px;
+    border-radius: 10px;
+}
+#replay {
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    padding: 40px;
+    font-family: "Courier New";
+    color: white;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-family: "Courier New";
+    font-size: 20px;
+    color: white;
+}
+
+#announcement {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-family: "Courier New";
+    color: white;
+}
+
+html {
+    background-color: black;
+}
